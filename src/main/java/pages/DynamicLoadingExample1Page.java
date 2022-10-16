@@ -26,6 +26,8 @@ public class DynamicLoadingExample1Page {
 //        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
 //        wait.until(ExpectedConditions.invisibilityOf(
 //                driver.findElement(loadingIndicator)));
+
+        //Configure the frequency using fluent wait
         FluentWait wait = new FluentWait(driver);
         wait.withTimeout(Duration.ofSeconds(5))
                 .pollingEvery(Duration.ofSeconds(1))
